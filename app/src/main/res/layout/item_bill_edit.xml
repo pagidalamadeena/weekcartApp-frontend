@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_button_outline"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textSize="10sp"
+        android:textColor="@color/text_gray" />
+
+    <EditText
+        android:id="@+id/etItemName"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_input_field"
+        android:padding="8dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Price (₹)"
+        android:textSize="10sp"
+        android:textColor="@color/text_gray" />
+
+    <EditText
+        android:id="@+id/etItemPrice"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_input_field"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Quantity"
+        android:textSize="10sp"
+        android:textColor="@color/text_gray" />
+
+    <EditText
+        android:id="@+id/etItemQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_input_field"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnRemoveItem"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#DC2626"
+        android:text="✕"
+        android:textColor="@color/white"
+        android:padding="0dp"
+        android:visibility="gone" /> <!-- Hidden for now to keep it simple -->
+</LinearLayout>
