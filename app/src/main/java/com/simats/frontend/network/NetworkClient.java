@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import java.io.IOException;
 
 public class NetworkClient {
-    private static final String BASE_URL = "http://192.168.0.11:5000/"; // Updated for physical phone testing on local
+    private static final String BASE_URL = "http://180.235.121.253:8177/"; // Updated for physical phone testing on local
                                                                         // network
     private static Retrofit retrofit = null;
 
