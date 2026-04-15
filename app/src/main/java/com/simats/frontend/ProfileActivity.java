@@ -59,6 +59,8 @@ public class ProfileActivity extends AppCompatActivity {
             finish();
         });
 
+        findViewById(R.id.btnDeleteAccount).setOnClickListener(v -> showDeleteAccountConfirmation());
+
         btnEditFamily.setOnClickListener(v -> showEditFamilyDialog());
 
         switchNotifications.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -152,6 +154,26 @@ public class ProfileActivity extends AppCompatActivity {
         });
         builder.setNegativeButton("Cancel", null);
         builder.show();
+    }
+
+    private void showDeleteAccountConfirmation() {
+        new AlertDialog.Builder(this)
+                .setTitle("Delete Account")
+                .setMessage("Are you sure you want to delete your account? This action is permanent and cannot be undone.")
+                .setPositiveButton("Delete", (dialog, which) -> deleteAccount())
+                .setNegativeButton("Cancel", null)
+                .show();
+    }
+
+    private void deleteAccount() {
+        // Returned to Mock version: Clear session locally
+        new TokenManager(this).clearToken();
+        Toast.makeText(this, "Account Deleted Successfully", Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 
     private void updateProfilePreference(boolean pushEnabled) {

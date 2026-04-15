@@ -11,8 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import java.io.IOException;
 
 public class NetworkClient {
-    private static final String BASE_URL = "http://180.235.121.253:8177/"; // Updated for physical phone testing on local
-                                                                        // network
+    private static final String BASE_URL = "http://180.235.121.253:8177/"; // Hosted live server
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient(Context context) {
@@ -38,7 +37,8 @@ public class NetworkClient {
                             Response response = chain.proceed(request);
 
                             // If token is invalid/expired (401), we should notify the app to logout
-                            if (response.code() == 401) {
+                            // Skip this for login requests
+                            if (response.code() == 401 && !original.url().toString().contains("/auth/login")) {
                                 tokenManager.clearToken();
 
                                 new android.os.Handler(android.os.Looper.getMainLooper()).post(() -> {
