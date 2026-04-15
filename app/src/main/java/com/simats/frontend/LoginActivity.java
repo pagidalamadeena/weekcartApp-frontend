@@ -78,8 +78,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<com.simats.frontend.models.User> call, Response<com.simats.frontend.models.User> response) {
                 if (response.isSuccessful()) {
-                    // Valid token, proceed to dashboard
-                    startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+                    // Valid token, proceed to subscription page
+                    startActivity(new Intent(LoginActivity.this, SubscriptionActivity.class));
                     finish();
                 } else {
                     // Invalid token, clear it and stay on login
@@ -108,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
                     tokenManager.saveToken(response.body().getAccessToken());
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, SubscriptionActivity.class);
                     startActivity(intent);
                     finish();
                 } else {

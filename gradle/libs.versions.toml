@@ -11,6 +11,8 @@ retrofit = "2.11.0"
 okhttp = "4.12.0"
 glide = "4.16.0"
 securityCrypto = "1.1.0-alpha06"
+billing = "7.1.1"
+
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -26,6 +28,8 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
 mpandroidchart = { group = "com.github.PhilJay", name = "MPAndroidChart", version = "v3.1.0" }
+billing-ktx = { group = "com.android.billingclient", name = "billing-ktx", version.ref = "billing" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -52,6 +52,8 @@ dependencies {
     
     // Charting
     implementation(libs.mpandroidchart)
+    implementation(libs.billing.ktx)
+
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
