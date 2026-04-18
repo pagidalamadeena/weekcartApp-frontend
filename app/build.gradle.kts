@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.simats.frontend"
+    namespace = "com.simats.weekcart"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.simats.frontend"
+        applicationId = "com.simats.weekcart"
         minSdk = 23
         targetSdk = 36
         versionCode = 1
