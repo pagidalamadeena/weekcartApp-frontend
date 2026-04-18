@@ -159,16 +159,16 @@ public class ProfileActivity extends AppCompatActivity {
     private void showDeleteAccountConfirmation() {
         new AlertDialog.Builder(this)
                 .setTitle("Delete Account")
-                .setMessage("Are you sure you want to delete your account? This action is permanent and cannot be undone.")
+                .setMessage("Do you want to permanently delete your account?")
                 .setPositiveButton("Delete", (dialog, which) -> deleteAccount())
                 .setNegativeButton("Cancel", null)
                 .show();
     }
 
     private void deleteAccount() {
-        // Returned to Mock version: Clear session locally
+        // Clear session locally
         new TokenManager(this).clearToken();
-        Toast.makeText(this, "Account Deleted Successfully", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Request will be processed in 24hrs", Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

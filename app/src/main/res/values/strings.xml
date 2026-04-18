@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">WeekCartApp</string>
+    <string name="app_name">WeekCart</string>
     <string name="track_analyze">Track. Analyze. Save.</string>
     <string name="get_started">Get Started</string>
-    <string name="welcome_to">Welcome to\nWeekCartApp</string>
+    <string name="welcome_to">Welcome to\nWeekCart</string>
     <string name="track_your">Track your grocery bills, get health insights,\nand manage your shopping smartly</string>
     <string name="email">Email</string>
     <string name="enter_email">Enter your email</string>
@@ -13,7 +13,7 @@
     <string name="dont_have_account">Don\'t have an account? </string>
     <string name="sign_up_here">Sign up here</string>
     <string name="create_account">Create Account</string>
-    <string name="join_weekcart">Join WeekCartApp to track your groceries</string>
+    <string name="join_weekcart">Join WeekCart to track your groceries</string>
     <string name="full_name">Full Name *</string>
     <string name="enter_full_name">Enter your full name</string>
     <string name="phone_number">Phone Number *</string>

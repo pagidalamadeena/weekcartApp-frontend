@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@id/ivLogo"
-                android:text="WeekCartApp"
+                android:text="WeekCart"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
